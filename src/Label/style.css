@@ -1,0 +1,12 @@
+.form__label {
+    background-color: teal;
+    padding: 10px;
+    font-weight: 800;
+}
+
+@media(max-width:530px) {
+    .form__label {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
