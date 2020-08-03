@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/toDO-list-react/static/css/main.8ecc7407.chunk.css",
-    "main.js": "/toDO-list-react/static/js/main.bb50b6db.chunk.js",
-    "main.js.map": "/toDO-list-react/static/js/main.bb50b6db.chunk.js.map",
-    "runtime-main.js": "/toDO-list-react/static/js/runtime-main.67d78068.js",
-    "runtime-main.js.map": "/toDO-list-react/static/js/runtime-main.67d78068.js.map",
-    "static/js/2.59662f4b.chunk.js": "/toDO-list-react/static/js/2.59662f4b.chunk.js",
-    "static/js/2.59662f4b.chunk.js.map": "/toDO-list-react/static/js/2.59662f4b.chunk.js.map",
-    "index.html": "/toDO-list-react/index.html",
-    "precache-manifest.d33f664dd6716d7490560b7d1149e546.js": "/toDO-list-react/precache-manifest.d33f664dd6716d7490560b7d1149e546.js",
-    "service-worker.js": "/toDO-list-react/service-worker.js",
-    "static/css/main.8ecc7407.chunk.css.map": "/toDO-list-react/static/css/main.8ecc7407.chunk.css.map",
-    "static/js/2.59662f4b.chunk.js.LICENSE.txt": "/toDO-list-react/static/js/2.59662f4b.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/toDO-list-react/static/media/background-image.79f7fce8.jpg"
+    "main.css": "/CurrencyConverter-react/static/css/main.d2c3f67e.chunk.css",
+    "main.js": "/CurrencyConverter-react/static/js/main.a805c306.chunk.js",
+    "main.js.map": "/CurrencyConverter-react/static/js/main.a805c306.chunk.js.map",
+    "runtime-main.js": "/CurrencyConverter-react/static/js/runtime-main.7eb402b1.js",
+    "runtime-main.js.map": "/CurrencyConverter-react/static/js/runtime-main.7eb402b1.js.map",
+    "static/js/2.59662f4b.chunk.js": "/CurrencyConverter-react/static/js/2.59662f4b.chunk.js",
+    "static/js/2.59662f4b.chunk.js.map": "/CurrencyConverter-react/static/js/2.59662f4b.chunk.js.map",
+    "index.html": "/CurrencyConverter-react/index.html",
+    "precache-manifest.672e19825c8496945913db947b8303a0.js": "/CurrencyConverter-react/precache-manifest.672e19825c8496945913db947b8303a0.js",
+    "service-worker.js": "/CurrencyConverter-react/service-worker.js",
+    "static/css/main.d2c3f67e.chunk.css.map": "/CurrencyConverter-react/static/css/main.d2c3f67e.chunk.css.map",
+    "static/js/2.59662f4b.chunk.js.LICENSE.txt": "/CurrencyConverter-react/static/js/2.59662f4b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/CurrencyConverter-react/static/media/background-image.79f7fce8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.67d78068.js",
+    "static/js/runtime-main.7eb402b1.js",
     "static/js/2.59662f4b.chunk.js",
-    "static/css/main.8ecc7407.chunk.css",
-    "static/js/main.bb50b6db.chunk.js"
+    "static/css/main.d2c3f67e.chunk.css",
+    "static/js/main.a805c306.chunk.js"
   ]
 }
