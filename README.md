@@ -1,24 +1,21 @@
-# Welcome to Currency Exchanger made by {Imperator};
+# Welcome to Currency Exchanger made by {Imperator}; 
 
 Welcome in my website where you find Currency Converter made during YouCode Frontend course. This simply app made using React.js let you exchange a few available currency to other. For now avaible currencies are USD, CHF, PLN, EUR, GBP but in future I add more currencies and connection with some API to rates which are update on a regular basis.
 
-Demo --> (tu będzie link)
+Demo --> (https://janiecmichal.github.io/CurrencyConverter-react/)
 
 ## Technologies used:
 
-- HTML
-- CSS
-- BEM convention
-- JavaScript
-- React.js
-- Imutabillity convention
+* HTML
+* CSS
+* BEM convention
+* JavaScript
+* React.js
+* Imutabillity convention
 
 ### This is invitation to my website --> Enjoy!
 
-
-![Imperium kodu](tu będzie obrazek)
-
-
+![Imperium kodu](https://github.com/JaniecMichal/CurrencyConverter-react/blob/master/src/images/OpenGraphImage.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -46,10 +43,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: this is a one-way operation. Once you `eject` , you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You don’t have to ever use `eject` . The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
