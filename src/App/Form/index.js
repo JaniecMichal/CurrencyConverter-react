@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import Label from "./Label";
+import Select from "./Select";
+import Amount from "./Amount";
+import Button from "./Button";
+import { currenciesRates } from "../CurrenciesRates/index.js";
+import Clock from "./Clock";
 import "./style.css";
-import Label from "../Label";
-import Select from "../Select";
-import Amount from "../Amount";
-import Button from "../Button";
 
 const Form = ({
-  currenciesRates,
   exchangeCurrency,
   writeToSymbol,
   writeFromSymbol,
@@ -31,6 +32,7 @@ const Form = ({
     <form className="form" onSubmit={onFormSubmit} >
       <fieldset className="form__fieldset">
         <legend className="form__legend">Currency coverter input data</legend>
+        <Clock />
         <p className="flexbox">
           <Label
             title="From currency:"
@@ -41,6 +43,7 @@ const Form = ({
             selectName="fromCurrency"
             stateValue={fromCurrencyName}
             onChange={({ target }) => setFromCurrencyName(target.value)}
+            currenciesRates={currenciesRates}
           />
         </p>
         <p className="flexbox">
@@ -52,6 +55,7 @@ const Form = ({
             selectName="toCurrency"
             stateValue={toCurrencyName}
             onChange={({ target }) => setToCurrencyName(target.value)}
+            currenciesRates={currenciesRates}
           />
 
         </p>

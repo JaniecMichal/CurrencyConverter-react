@@ -4,14 +4,7 @@ import Header from "./Header";
 import Form from "./Form";
 import Result from "./Result";
 import Footer from "./Footer";
-
-const currenciesRates = [
-  { id: "EUR", rate: 4.4573 },
-  { id: "GBP", rate: 4.9328 },
-  { id: "USD", rate: 3.9741 },
-  { id: "CHF", rate: 4.1811 },
-  { id: "PLN", rate: 1.0 }
-];
+import {currenciesRates} from "./CurrenciesRates/index.js";
 
 function App() {
 
