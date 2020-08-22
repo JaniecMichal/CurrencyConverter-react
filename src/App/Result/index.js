@@ -1,17 +1,17 @@
 import React from "react";
-import "./style.css";
+import {ResultWrapper, ResultHeader, ResultContent} from "./styled";
 
 const Result = ({ resultValue, toCurrencySymbol, amountValue, fromCurrencySymbol }) => {
   return (
-    <section className="section">
-      <h2 className="section__header">Here you see result:
-        <span className="section__result">
+    <ResultWrapper>
+      <ResultHeader>Here you see result:
+        <ResultContent>
           {amountValue} {fromCurrencySymbol}
           {resultValue !== "" ? " = " : " "}
           {resultValue} {toCurrencySymbol}
-        </span>
-      </h2>
-    </section>
+        </ResultContent>
+      </ResultHeader>
+    </ResultWrapper>
   )
 };
 

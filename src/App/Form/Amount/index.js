@@ -1,10 +1,9 @@
 import React from "react";
-import "./style.css";
+import { Input } from "./styled";
 
 const Amount = ({ stateValue, onChange }) => (
-  <input
+  <Input
     type="number"
-    className="form__input"
     id="amount"
     min="1"
     step="0.01"

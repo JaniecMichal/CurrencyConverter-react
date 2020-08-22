@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
-
+import {ClockContainer} from "./styled";
 
 const Clock = () => {
     const [newDate, setNewDate] = useState(new Date());
@@ -30,7 +29,7 @@ const Clock = () => {
 
 
     return (
-        <p className="clock">Dzisiaj jest {setDateString(newDate)}  </p>
+        <ClockContainer>Dzisiaj jest {setDateString(newDate)}  </ClockContainer>
     )
 };
 

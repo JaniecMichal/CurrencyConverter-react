@@ -1,19 +1,18 @@
 import React from "react";
-import "./style.css";
+import {FooterWrapper, FooterLink} from "./styled";
 
 const Footer = () => (
-  <footer className="footer">Currency Converter by Michał Janiec &copy; All right reserved 2020.
+  <FooterWrapper>Currency Converter by Michał Janiec &copy; All right reserved 2020.
     <p>Icon made by [turkkub] from
-      <a
-        className="footer__link"
+      <FooterLink
         href="https://www.flaticon.com/authors/freepik"
         target="_blank"
         rel="noreferrer noopener"
       >
-        www.flaticon.com
-      </a>
+        {" "}www.flaticon.com
+      </FooterLink>
     </p>
-  </footer>
+  </FooterWrapper>
 )
 
 export default Footer;

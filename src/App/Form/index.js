@@ -5,7 +5,8 @@ import Amount from "./Amount";
 import Button from "./Button";
 import { currenciesRates } from "../CurrenciesRates/index.js";
 import Clock from "./Clock";
-import "./style.css";
+import {FormWrapper, Fieldset, Legend, Flexbox} from "./styled";
+
 
 const Form = ({
   exchangeCurrency,
@@ -29,24 +30,24 @@ const Form = ({
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit} >
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Currency coverter input data</legend>
+    <FormWrapper onSubmit={onFormSubmit} >
+      <Fieldset>
+        <Legend>Currency coverter input data</Legend>
         <Clock />
-        <p className="flexbox">
+        <Flexbox>
           <Label
             title="From currency:"
             inputName="fromCurrency"
           />
           <Select
-            modifierClass="form__select--firstSelect"
+            first
             selectName="fromCurrency"
             stateValue={fromCurrencyName}
             onChange={({ target }) => setFromCurrencyName(target.value)}
             currenciesRates={currenciesRates}
           />
-        </p>
-        <p className="flexbox">
+        </Flexbox>
+        <Flexbox>
           <Label
             title="To currency:"
             inputName="toCurrency"
@@ -58,8 +59,8 @@ const Form = ({
             currenciesRates={currenciesRates}
           />
 
-        </p>
-        <p className="flexbox">
+        </Flexbox>
+        <Flexbox>
           <Label
             title="Amount to convert:"
             inputName="amount"
@@ -68,10 +69,10 @@ const Form = ({
             stateValue={amountValue}
             onChange={({ target }) => setAmountValue(target.value)}
           />
-        </p>
+        </Flexbox>
         <Button />
-      </fieldset>
-    </form >
+      </Fieldset>
+    </FormWrapper>
   )
 };
 

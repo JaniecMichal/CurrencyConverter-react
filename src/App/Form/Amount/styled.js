@@ -1,18 +1,14 @@
-.form__select {
-    margin-left: 89px;
+import styled from "styled-components";
+
+export const Input = styled.input`
+    margin-left: 30px;
     padding: 10px;
     width: 200px;
     border: 2px solid teal;
-}
 
-.form__select--firstSelect {
-    margin-left: 67px;
-}
-
-@media(max-width:530px) {
-    .form__select {
+    @media(max-width:530px) {
         width: 100%;
         margin-top: 10px;
         margin-left: 0px;
     }
-}
+`;

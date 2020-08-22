@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css"
+import { Exchange } from "./styled";
 
 const Button = () => (
-  <button className="form__button">Exchange!</button>
+  <Exchange>Exchange!</Exchange>
 );
 
 export default Button;

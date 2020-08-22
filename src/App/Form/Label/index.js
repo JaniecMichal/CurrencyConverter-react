@@ -1,8 +1,8 @@
 import React from "react";
-import "./style.css";
+import {LabelContainer} from "./styled";
 
 const Label = ({ title, inputName }) => (
-  <label className="form__label" htmlFor={inputName}>{title}</label>
+  <LabelContainer htmlFor={inputName}>{title}</LabelContainer>
 );
 
 export default Label;
