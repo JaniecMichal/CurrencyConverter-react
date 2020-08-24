@@ -1,14 +1,15 @@
 import React from "react";
 import {ResultWrapper, ResultHeader, ResultContent} from "./styled";
 
-const Result = ({ resultValue, toCurrencySymbol, amountValue, fromCurrencySymbol }) => {
+const Result = ({resultContainer,resultValue }) => {
+  console.log(resultValue)
   return (
     <ResultWrapper>
       <ResultHeader>Here you see result:
         <ResultContent>
-          {amountValue} {fromCurrencySymbol}
+          {resultContainer.amountValue} {resultContainer.fromCurrencyName}
           {resultValue !== "" ? " = " : " "}
-          {resultValue} {toCurrencySymbol}
+          {resultValue} {resultContainer.toCurrencyName}
         </ResultContent>
       </ResultHeader>
     </ResultWrapper>
