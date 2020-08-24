@@ -16,7 +16,7 @@ Demo --> (https://janiecmichal.github.io/CurrencyConverter-react/)
 
 ### This is invitation to my website --> Enjoy!
 
-![Imperium kodu](https://github.com/JaniecMichal/CurrencyConverter-react/blob/master/src/images/OpenGraphImage.png?raw=true)
+![Imperium kodu](https://github.com/JaniecMichal/toDO-list-react/blob/master/src/App/images/OpenGraphImage.png?raw=true)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
