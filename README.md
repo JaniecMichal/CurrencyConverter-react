@@ -8,9 +8,10 @@ Demo --> (https://janiecmichal.github.io/CurrencyConverter-react/)
 
 * HTML
 * CSS
-* BEM convention
 * JavaScript
 * React.js
+* styled-components
+* customs-hook
 * Imutabillity convention
 
 ### This is invitation to my website --> Enjoy!
