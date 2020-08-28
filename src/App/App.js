@@ -5,26 +5,21 @@ import Form from "./Form";
 import Result from "./Result";
 import Footer from "./Footer";
 import { currenciesRates } from "./CurrenciesRates/index.js";
-import {useCurrenciesData} from "./useCurrenciesData";
+import { useCurrenciesData } from "./useCurrenciesData";
 
 function App() {
-  const [exchangeCurrency,
-    writeResultsContent,
-    resultContainer,
-    resultValue] = useCurrenciesData();
+  const { calculate, resultContainer } = useCurrenciesData();
 
 
   return (
     <Container>
       <Header mainTitle="Currency Converter by {Imperator}" />
       <Form
-        exchangeCurrency={exchangeCurrency}
+        calculate={calculate}
         currenciesRates={currenciesRates}
-        writeResultsContent={writeResultsContent}
       />
       <Result
         resultContainer={resultContainer}
-        resultValue={resultValue}
       />
       <Footer />
     </Container>

@@ -5,12 +5,10 @@ import Amount from "./Amount";
 import Button from "./Button";
 import Clock from "./Clock";
 import { currenciesRates } from "../CurrenciesRates/index.js";
-import {useRate} from "./useRate";
+import { useRate } from "./useRate";
 import { FormWrapper, Fieldset, Legend, Flexbox } from "./styled";
 
-const Form = ({
-  exchangeCurrency,
-  writeResultsContent }) => {
+const Form = ({ calculate }) => {
   const [fromCurrencyName, setFromCurrencyName] = useState("EUR");
   const [toCurrencyName, setToCurrencyName] = useState("PLN");
   const [amountValue, setAmountValue] = useState("");
@@ -18,8 +16,7 @@ const Form = ({
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    exchangeCurrency(rate, amountValue);
-    writeResultsContent(amountValue, fromCurrencyName, toCurrencyName)
+    calculate(rate, amountValue, fromCurrencyName, toCurrencyName)
     setAmountValue("");
   };
 
