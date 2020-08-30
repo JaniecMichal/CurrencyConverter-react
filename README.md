@@ -1,6 +1,6 @@
 # Welcome to Currency Exchanger made by {Imperator}; 
 
-Welcome in my website where you find Currency Converter made during YouCode Frontend course. This simply app made using React.js let you exchange a few available currency to other. For now avaible currencies are USD, CHF, PLN, EUR, GBP but in future I add more currencies and connection with some API to rates which are update on a regular basis.
+Welcome in my website where you find Currency Converter made during YouCode Frontend course. This simply app made using React.js let you exchange available currency to other. Currencies rates are downloading from European Central Bank which support many currency. For now in my APP are use shortcut but in future it will be full names.
 
 Demo --> (https://janiecmichal.github.io/CurrencyConverter-react/)
 
@@ -12,7 +12,45 @@ Demo --> (https://janiecmichal.github.io/CurrencyConverter-react/)
 * React.js
 * styled-components
 * customs-hook
+
+## METHODOLOGIES USED:
+
+* JSX
+* Fetch API
 * Imutabillity convention
+
+## Avaiable currencies:
+
+* AUD - Australian dollar
+* BGN - Bulgarian lev
+* BRL - Brazilian real
+* CAD - Canadian dollar
+* CHF - Swiss Franc
+* CZK - Czech koruna
+* DKK - Danish krone
+* EUR - Euro
+* GBP - British Pound
+* HKD - Hong Kong dollar
+* HUF - Hungarian forint
+* IDR - Indonesian rupiah
+* ILS - Israeli shekel
+* INR - Indian rupee
+* ISK - Icelandic krona
+* KRW - South Korean won
+* MXN - Mexican peso
+* MYR - Malaysian ringgit
+* NOK - Norwegian krone
+* NZD - New Zealand Dollar
+* PHP - Phlilippine peso
+* PLN - Polish Zloty
+* RON - Romanian leu
+* RUB - Russian rouble
+* SEK - Swedish krona
+* SGD - Singapore dollar
+* THB - Thai baht
+* TRY - Turkish lira
+* USD - US Dollar
+* ZAR - South Afrifcan rand
 
 ### This is invitation to my website --> Enjoy!
 
