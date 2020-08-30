@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ResultWrapper = styled.section`
     display:flex;
@@ -7,6 +7,10 @@ export const ResultWrapper = styled.section`
     max-width: 800px;
     background-color: teal;
     font-weight: 800;
+
+    ${({ loading }) => loading && css`
+        display: none;
+    `}
 `;
 
 export const ResultHeader = styled.h2`

@@ -1,23 +1,25 @@
 import React from "react";
 import { SelectContainer } from "./styled";
 
-const Select = ({ currenciesRates, modifierClass, selectName, stateValue, onChange, first }) => (
+const Select = ({ currencyRates, selectName, stateValue, onChange, first }) => {
+  const currencyNames = Object.keys(currencyRates);
+  currencyNames.sort((a, b) => a.localeCompare(b));
+  return (
+    <SelectContainer
+      first={first}
+      id={selectName}
+      value={stateValue}
+      onChange={onChange}
+      required
+    >
+      {
+        currencyNames.map(currencyName => (
+          <option key={currencyName} value={currencyName}>{currencyName}</option>
+        ))
+      }
+    </SelectContainer>
 
-  <SelectContainer
-    first={first}
-    id={selectName}
-    value={stateValue}
-    onChange={onChange}
-    required
-
-  >
-    {
-      currenciesRates.map(currencyRate => (
-        <option key={currencyRate.id} value={currencyRate.id}>{currencyRate.fullName}</option>
-      ))
-    }
-  </SelectContainer>
-
-);
+  )
+};
 
 export default Select;

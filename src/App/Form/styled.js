@@ -1,7 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const FormWrapper = styled.form`
     text-align: center;
+
+    ${({ loading }) => loading && css`
+        display:none;
+    `}
 `;
 
 export const Fieldset = styled.fieldset`
@@ -21,5 +25,10 @@ export const Flexbox = styled.p`
         display: flex;
         flex-flow: column;
     }
+`;
+
+export const InformParagraph = styled(Flexbox)`
+    font-weight: 700;
+    margin-top:30px;
 `;
 

@@ -1,9 +1,9 @@
-import {currenciesRates} from "../CurrenciesRates";
 
-export const useRate = (fromCurrencyName, toCurrencyName) => {
-    const fromCurrency = currenciesRates.find(({ id }) => id === fromCurrencyName);
-    const toCurrency = currenciesRates.find(({ id }) => id === toCurrencyName);
-    const currentRate = (fromCurrency.rate / toCurrency.rate).toFixed(2);
+export const useRate = (fromCurrencyName, toCurrencyName, currencyRates) => {
+    
+    const fromCurrency = currencyRates[fromCurrencyName];
+    const toCurrency = currencyRates[toCurrencyName]
+    const currentRate = (toCurrency / fromCurrency);
 
     return currentRate;
 };

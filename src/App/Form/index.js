@@ -4,15 +4,20 @@ import Select from "./Select";
 import Amount from "./Amount";
 import Button from "./Button";
 import Clock from "./Clock";
-import { currenciesRates } from "../CurrenciesRates/index.js";
 import { useRate } from "./useRate";
-import { FormWrapper, Fieldset, Legend, Flexbox } from "./styled";
+import { 
+        FormWrapper, 
+        Fieldset, 
+        Legend, 
+        Flexbox, 
+        InformParagraph 
+       } from "./styled";
 
-const Form = ({ calculate }) => {
-  const [fromCurrencyName, setFromCurrencyName] = useState("EUR");
-  const [toCurrencyName, setToCurrencyName] = useState("PLN");
+const Form = ({ calculate, currencyRates, loading, date }) => {
+  const [fromCurrencyName, setFromCurrencyName] = useState("PLN");
+  const [toCurrencyName, setToCurrencyName] = useState("EUR");
   const [amountValue, setAmountValue] = useState("");
-  const rate = useRate(fromCurrencyName, toCurrencyName)
+  const rate = useRate(fromCurrencyName, toCurrencyName, currencyRates)
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -21,7 +26,7 @@ const Form = ({ calculate }) => {
   };
 
   return (
-    <FormWrapper onSubmit={onFormSubmit} >
+    <FormWrapper onSubmit={onFormSubmit} loading={loading === true ? "loading" : ""} >
       <Fieldset>
         <Legend>Currency coverter input data</Legend>
         <Clock />
@@ -35,7 +40,7 @@ const Form = ({ calculate }) => {
             selectName="fromCurrency"
             stateValue={fromCurrencyName}
             onChange={({ target }) => setFromCurrencyName(target.value)}
-            currenciesRates={currenciesRates}
+            currencyRates={currencyRates}
           />
         </Flexbox>
         <Flexbox>
@@ -47,7 +52,7 @@ const Form = ({ calculate }) => {
             selectName="toCurrency"
             stateValue={toCurrencyName}
             onChange={({ target }) => setToCurrencyName(target.value)}
-            currenciesRates={currenciesRates}
+            currencyRates={currencyRates}
           />
 
         </Flexbox>
@@ -62,6 +67,7 @@ const Form = ({ calculate }) => {
           />
         </Flexbox>
         <Button />
+        <InformParagraph>Current rates comes from European Central Bank for day {date} </InformParagraph>
       </Fieldset>
     </FormWrapper>
   )
