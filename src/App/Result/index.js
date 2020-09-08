@@ -8,7 +8,7 @@ const Result = ({ loading, resultContainer }) => {
         <ResultContent>
           {resultContainer.amountValue} {resultContainer.fromCurrencyName}
           {resultContainer.resultValue !== undefined ? " = " : " "}
-          {resultContainer.resultValue !== undefined ? resultContainer.resultValue.toFixed(0) : " "} {resultContainer.toCurrencyName}
+          {resultContainer.resultValue !== undefined ? resultContainer.resultValue.toFixed(2) : " "} {resultContainer.toCurrencyName}
         </ResultContent>
       </ResultHeader>
     </ResultWrapper>
