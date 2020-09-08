@@ -37,7 +37,7 @@ export const useRates = () => {
             fetch("https://api.exchangeratesapi.io/latest?base=PLN")
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error(response.satusText);
+                        throw new Error(response.statusText);
                     }
                     return response;
                 })
