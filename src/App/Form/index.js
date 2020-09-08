@@ -5,13 +5,13 @@ import Amount from "./Amount";
 import Button from "./Button";
 import Clock from "./Clock";
 import { useRate } from "./useRate";
-import { 
-        FormWrapper, 
-        Fieldset, 
-        Legend, 
-        Flexbox, 
-        InformParagraph 
-       } from "./styled";
+import {
+  FormWrapper,
+  Fieldset,
+  Legend,
+  Flexbox,
+  InformParagraph
+} from "./styled";
 
 const Form = ({ calculate, currencyRates, loading, date }) => {
   const [fromCurrencyName, setFromCurrencyName] = useState("PLN");
@@ -22,7 +22,6 @@ const Form = ({ calculate, currencyRates, loading, date }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculate(rate, amountValue, fromCurrencyName, toCurrencyName)
-    setAmountValue("");
   };
 
   return (
@@ -63,7 +62,7 @@ const Form = ({ calculate, currencyRates, loading, date }) => {
           />
           <Amount
             stateValue={amountValue}
-            onChange={({ target }) => setAmountValue(target.value)}
+            onChange={({ target }) => setAmountValue(Number(target.value))}
           />
         </Flexbox>
         <Button />
