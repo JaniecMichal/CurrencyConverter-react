@@ -15,7 +15,7 @@ export const useClock = () => {
     }, []);
 
     const setDateString = (date) => {
-        return (date.toLocaleString(undefined, {
+        return (date.toLocaleString("en-US", {
             weekday: "long",
             hour: "2-digit",
             minute: "2-digit",

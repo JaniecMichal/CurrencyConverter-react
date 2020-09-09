@@ -6,7 +6,7 @@ const Clock = () => {
     const [newDate, setDateString] = useClock();
 
     return (
-        <ClockContainer>Dzisiaj jest {setDateString(newDate)}  </ClockContainer>
+        <ClockContainer>Today is {setDateString(newDate)}  </ClockContainer>
     )
 };
 
