@@ -8,8 +8,8 @@ export const ResultWrapper = styled.section`
     background-color: teal;
     font-weight: 800;
 
-    ${({ loading }) => loading && css`
-        display: none;
+    ${({ notSucess }) => notSucess && css`
+        display:none;
     `}
 `;
 

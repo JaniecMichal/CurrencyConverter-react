@@ -1,9 +1,18 @@
 import React from "react";
 import { SelectContainer } from "./styled";
 
-const Select = ({ currencyRates, selectName, stateValue, onChange, first }) => {
-  const currencyNames = Object.keys(currencyRates);
-  currencyNames.sort((a, b) => a.localeCompare(b));
+const Select = ({ state, currencyRates, selectName, stateValue, onChange, first }) => {
+  const options = () => {
+    const currencyNames = Object.keys(currencyRates)
+    currencyNames.sort((a, b) => a.localeCompare(b));
+
+    return (
+      currencyNames.map(currencyNames => (
+        <option key={currencyNames} value={currencyNames}>{currencyNames}</option>
+      )))
+  };
+
+  
   return (
     <SelectContainer
       first={first}
@@ -12,11 +21,7 @@ const Select = ({ currencyRates, selectName, stateValue, onChange, first }) => {
       onChange={onChange}
       required
     >
-      {
-        currencyNames.map(currencyName => (
-          <option key={currencyName} value={currencyName}>{currencyName}</option>
-        ))
-      }
+      {state === "sucess" ? options() : ""}
     </SelectContainer>
 
   )

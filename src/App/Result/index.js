@@ -1,9 +1,9 @@
 import React from "react";
 import { ResultWrapper, ResultHeader, ResultContent } from "./styled";
 
-const Result = ({ loading, resultContainer }) => {
+const Result = ({ state, resultContainer }) => {
   return (
-    <ResultWrapper loading={loading === true ? "loading" : ""}>
+    <ResultWrapper notSucess={state !== "sucess" ? "notSucess" : ""}>
       <ResultHeader>Here you see result:
         <ResultContent>
           {resultContainer.amountValue} {resultContainer.fromCurrencyName}

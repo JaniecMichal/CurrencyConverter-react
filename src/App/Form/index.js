@@ -13,19 +13,19 @@ import {
   InformParagraph
 } from "./styled";
 
-const Form = ({ calculate, currencyRates, loading, date }) => {
+const Form = ({ calculate, currencyRates, state, date }) => {
   const [fromCurrencyName, setFromCurrencyName] = useState("PLN");
   const [toCurrencyName, setToCurrencyName] = useState("EUR");
   const [amountValue, setAmountValue] = useState("");
-  const rate = useRate(fromCurrencyName, toCurrencyName, currencyRates)
-
+  const rate = useRate(fromCurrencyName, toCurrencyName, currencyRates, state);
+    
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculate(rate, amountValue, fromCurrencyName, toCurrencyName)
   };
 
   return (
-    <FormWrapper onSubmit={onFormSubmit} loading={loading === true ? "loading" : ""} >
+    <FormWrapper onSubmit={onFormSubmit} notSucess={state !== "sucess" ? "notSucess" : ""} >
       <Fieldset>
         <Legend>Currency coverter input data</Legend>
         <Clock />
@@ -40,6 +40,7 @@ const Form = ({ calculate, currencyRates, loading, date }) => {
             stateValue={fromCurrencyName}
             onChange={({ target }) => setFromCurrencyName(target.value)}
             currencyRates={currencyRates}
+            state={state}
           />
         </Flexbox>
         <Flexbox>
@@ -52,6 +53,7 @@ const Form = ({ calculate, currencyRates, loading, date }) => {
             stateValue={toCurrencyName}
             onChange={({ target }) => setToCurrencyName(target.value)}
             currencyRates={currencyRates}
+            state={state}
           />
 
         </Flexbox>

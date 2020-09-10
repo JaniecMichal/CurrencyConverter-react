@@ -8,6 +8,15 @@ export const BoxWrapper = styled.div`
     background-color: #eee;
 
     ${({ loading }) => loading && css`
+        color:teal;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+    `}
+
+    ${({ error }) => error && css`
+        color:red;
         display:flex;
         flex-direction:column;
         align-items:center;
@@ -17,7 +26,6 @@ export const BoxWrapper = styled.div`
 `;
 
 export const Information = styled.h2`
-    color: teal;
     font-size:35px;
     font-style: italic;
 `;

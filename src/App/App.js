@@ -15,15 +15,15 @@ function App() {
   return (
     <Container>
       <Header mainTitle="Currency Converter by {Imperator}" />
-      <InformationBox loading={appState.loading} errorState={appState.errorState} />
+      <InformationBox state={appState.state} />
       <Form
-        loading={appState.loading}
+        state={appState.state}
         calculate={calculate}
         currencyRates={appState.currencyRates}
         date={appState.date}
       />
       <Result
-        loading={appState.loading}
+        state={appState.state}
         resultContainer={resultContainer}
       />
       <Footer />

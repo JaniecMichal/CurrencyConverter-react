@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 export const FormWrapper = styled.form`
     text-align: center;
 
-    ${({ loading }) => loading && css`
+    ${({ notSucess }) => notSucess && css`
         display:none;
     `}
 `;
