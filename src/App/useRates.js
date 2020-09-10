@@ -31,7 +31,7 @@ export const useRates = () => {
                 console.error("Something bad happened!", error);
             }
         };
-        setTimeout(fetchData, 1000);
+        setTimeout(fetchData, 1700);
     }, []);
     
     return appState;
