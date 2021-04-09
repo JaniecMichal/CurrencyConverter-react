@@ -1,38 +1,39 @@
 import { useState, useEffect } from "react";
+import { key } from "./keytoAPI";
 
 export const useRates = () => {
-    const [appState, setAppState] = useState(
-        {
-            state:"",
-        });
+  const [appState, setAppState] = useState({
+    state: "",
+  });
 
-    useEffect(() => {
+  useEffect(() => {
+    setAppState({
+      state: "loading",
+    });
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://v6.exchangerate-api.com/v6/${key}/latest/PLN`
+        );
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+
+        const ratesData = await response.json();
         setAppState({
-            state:"loading",
-        })
-        const fetchData = async () => {
-            try {
-                const response = await fetch("https://api.exchangeratesapi.io/latest?base=PLN");
+          currencyRates: ratesData.conversion_rates,
+          date: ratesData.time_last_update_utc,
+          state: "sucess",
+        });
+      } catch (error) {
+        setAppState({
+          state: "error",
+        });
+        console.error("Something bad happened!", error);
+      }
+    };
+    setTimeout(fetchData, 1700);
+  }, []);
 
-                if (!response.ok) {
-                    throw new Error(response.statusText);
-                }
-
-                const ratesData = await response.json();
-                setAppState({
-                    currencyRates:ratesData.rates,
-                    date:ratesData.date,
-                    state:"sucess",
-                })
-            } catch (error) {
-                setAppState({
-                    state:"error",
-                })
-                console.error("Something bad happened!", error);
-            }
-        };
-        setTimeout(fetchData, 1700);
-    }, []);
-    
-    return appState;
+  return appState;
 };
